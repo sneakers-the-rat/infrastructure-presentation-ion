@@ -57,12 +57,12 @@ const toc_slides = [
     slides: slides_p2p,
     notes: notes_p2p
   },
-  // {
-  //   name: 'tools',
-  //   display: 'Shared Tools',
-  //   slides: slides_tools,
-  //   notes: notes_tools
-  // },
+  {
+    name: 'tools',
+    display: 'Shared Tools',
+    slides: slides_tools,
+    notes: notes_tools
+  },
   // {
   //   name: 'knowledge',
   //   display: 'Shared Knowledge',
