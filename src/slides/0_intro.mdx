@@ -29,6 +29,7 @@ import AmazonLogo from '../img/amazonlogo.png'
   Decentralized Infrastructure for (Neuro)science
 </Heading>
 </Box>
+<Text fontFamily="monospace">ION SPECIAL EDITION</Text>
 
 <Text>Jonny Saunders, 2021</Text>
 
@@ -46,25 +47,6 @@ The goal is to make information into a tool for liberation.<br/>
     - Brian Martin, 1998, <a fontSize={"1em"} href={"https://documents.uow.edu.au/~bmartin/pubs/98il/ilall.html"}>Information Liberation</a>
   </Quote>
 </Box>
-
-
-Notes: presenter notes??
-  - put a big animated version of The System here why dontcha
-  - try ramda!!! https://github.com/ramda/ramda/wiki/Cookbook
-  - https://github.com/chenglou/react-motion
-  - for simple animations https://reactjs.org/docs/animation.html
-  - stepping through text: https://codesandbox.io/s/framer-motion-split-text-o1r7d?from-embed
-    - https://github.com/framer/motion
-    - https://popmotion.io/pose/api/react-pose-text/
-toc:
-  - use any of these props https://github.com/FormidableLabs/spectacle/blob/75052e61bedabf5ed9965506bb1fb7e82112782f/src/components/deck/deck.js#L349
-  - see https://github.com/FormidableLabs/spectacle/blob/75052e61bedabf5ed9965506bb1fb7e82112782f/src/components/progress.js#L25
-
-other softwarez to mention:
-  - dataverse
-  - datalad
-  - DANDI
-
 
 ---
 <SvgAnimator
@@ -201,7 +183,7 @@ other softwarez to mention:
 />
 
 
-<Box width={1/4}
+<Box width={4/9}
      style={{position:'absolute',
        left:'30px'}}>
   <Heading
@@ -213,97 +195,95 @@ other softwarez to mention:
     fontSize={"6em"}
   textAlign={'right'}
   id={"computers-heading"}
-  width={1/3}
->What<br/>computer<br/>do?</Heading>
+  width={4/9}
+>What's the<br/>deal with<br/>computers?</Heading>
 <Grid gridTemplateColumns={"1fr 1fr 1fr"}>
   <Text fontSize={50} textAlign={'center'} id="computers-smiley-0" fontFamily={'monospace'}>:\</Text>
   <Text fontSize={50} textAlign={'center'} id="computers-smiley-1" fontFamily={'monospace'}>:(</Text>
   <Text fontSize={50} textAlign={'center'} id="computers-smiley-2" fontFamily={'monospace'}>:'(</Text>
 </Grid></Box>
 
+Notes: We use computers for much of the everyday practice of science
 
-<PositionedCard
-    id={'experiment-card'} x={40} y={550} width={1/3}
-  title={"Control Experiments"}
-    body={"Programming experiments is hard! A mélange of proprietary, open source, and custom-built tools stitched together with in-lab scripts"}
-    appearStep={5}
-  />
+- Running experiments
+- Storing & Analyzing Data
+- Communicating and sharing results
 
-<PositionedCard
-    id={'data-card'} x={1300} y={300} width={1/3}
-    title={"Store & Analyze Data"}
-    body={"Standardization is hard! Mostly stored in ad-hoc formats. Open source tools for basic elements of analysis, but everyone makes their own workflow."}
-    appearStep={6}
-    />
-
-<PositionedCard
-    id={'share-card'} x={600} y={30} width={1/3}
-    title={"Share & Communicate"}
-    body={"Good sharing practices are hard! 10,000 mutually incompatible centralized databases. PDFs, PPTs, private Slacks, and the godforsaken Science Twitter."}
-    appearStep={7}
-    />
+But for each of these, we have a fragmented landscape of tools and so everything is *hard* !
 
 ---
 
-<Box width={2/3}>
-  <Collapser>
-    <Heading textAlign={'left'} color={"tools"} fontWeight={200} fontStyle={"italic"}>
-      (The Absence Of)
-    </Heading>
-  </Collapser>
-  <Heading textAlign={'left'} lineHeight={1}>
-    Digital Infrastructure Defines the Everyday Reality of Science
-  </Heading>
-</Box>
+<div className={'blankslide'}></div>
 
-<Box width={1} height={"40px"}/>
+Notes: I want to talk about something much larger than computers being hard
 
-<Grid gridTemplateColumns={'1fr 1fr'} gridColumnGap={"40px"} marginTop={"40px"}>
-  <Appear stepIndex={2} id={'impacts-1'}><Heading fontSize={"h3"} color={"tools"} fontWeight={200}>Personally...</Heading></Appear>
-  <Appear stepIndex={3} id={'impacts-2'}><Heading fontSize={"h3"} color={"tools"} fontWeight={200} >Systemically...</Heading></Appear>
-  <Appear stepIndex={2} id={'impacts-3'}><VerticalLinearStepper
-  steps={[
-    {
-      title: 'Everyone has to be a programmer now',
-      body: 'Because generalized infrastructure hasnt been built, researchers need to learn several additional disciplines to do the one they chose. Why does every biologist need to do a masters degrees worth of work on data engineering?',
-    },
-    {
-      title: 'Reinventing most things from scratch',
-      body: 'Because we dont have a good way of preserving and sharing technical knowledge, we all resolve the same problem over and over again'
-    },
-    {
-      title: "'Openness' is expensive",
-      body: 'because it requires so much additional labor, and the professional and personal benefits are so low, many researchers cant afford to use "open" scientific practices --- even if they wanted to.'
-    },
-    {
-      title: 'Scientific discourse at the pleasure of for-profit platforms.',
-      body: 'because the mediums of scientific discourse are driven by ad clicks or by deeply entrenched institutional power, we dont have a good medium for sustained, thoughtful, densely interlinked dialogue that takes advantage of the possibilities of contemporary communication technology.'
-    }
-  ]}
-  /></Appear>
-  <Appear stepIndex={3} id={'impacts-4'}>
-  <VerticalLinearStepper
-      steps={[
-        {
-          title: 'Undone labor of infrastructure falls disproportionately on Early Career Researchers',
-          body: '',
-        },
-        {
-          title: 'Technical knowledge silos fuel scientific inequity',
-          body: ''
-        },
-        {
-          title: "Little means of credit assignment for large numbers of scientific workers",
-          body: ''
-        },
-        {
-          title: 'Replication crises, potentially futile to study the brain with such brittle tools',
-          body: ''
-        }
-      ]}
-  />
-  </Appear>
-</Grid>
+I want to make the argument that many seemingly-distinct problems have a shared cause:
+the near-absence of basic digital infrastructure for science.
+
+Rather than being trivial or unavoidable, I will argue that digital deinfrastructuring
+- defines the everyday reality of science, with harms personal
+  and systemic, present and future.
+- can be solved! but an ethical, empowering solution is not inevitable -- indeed
+  we are on track to create an immensely more terrifying triple-dip industry
+  strapped to the back of public funding for science
+- and **decentralization** is the best means of liberatory, globally empowering
+  digital infrastructure.
+
+To do that
+- I'll take some lessons from other knowledge communities: specifically pirates,
+  the rad hippie wing of internet architects, librarians, STS.
+- And sketch basic vision of what decentralized digital infrastructure for science
+  could look like, how we get there, and how we are trying to get started at ION
+
+<hr/>
+
+# 1) What are the symptoms of digital deinfrastructuring?
+
+# As a Labor System:
+
+- Fundamentally altered the practice of science so that almost every single field
+  is half programming now
+- Scientific **labor is prodigiously reduplicated**. reinventing
+  everything and redoing the same experiments in every lab, and the ethical
+  catastrophe for animal research that entails
+- Most of that labor falls on **ECRs**, creating a labor system where lack of infrastructure
+  is papered over by always-expanding needs for cheap labor, armies of undergrads
+  clicking through videos, cleaning data, grad students thrown to the wolves of amateur engineering
+- The production of an underclass of technical laborers that do a large proportion
+  of the *work* of science but don't have access to the traditional reward mechanisms
+  of science (ie. papers)
+- Technical and resource knowledge silos make the *rich get richer* as wealthy labs
+  and institutes can afford to hire engineers and build sophisticated core facilities,
+  do a qualitatively different kind of science, and maintain increasingly disproportionate
+  funding
+
+# As a System of Scientific Inquiry:
+
+- Holds science back from its naive characterization as a cumulative, self-correcting
+  system.
+- Profoundly leaky knowledge system where entire PhDs worth of data are lost and
+  rendered useless as a matter of regular practice just by forgetting what format it's in
+  or where it's stored.
+- Inevitability of replication crises because it's impossible to replicate experiments
+  on rigs that were built once and never documented
+- Stunted scientific discourse on for-profit platforms that don't come close to
+  satisfying our needs. The scientific consensus exists as a disorderly pile of hundreds of
+  thousands of isolated pdfs who only reference each other via the exhausting labor
+  of exhaustive brute force literature searches. That, or godforsaken science twitter
+- The potential futility of understanding the brain from the limited viewpoint
+  of data from a single or small number of labs, or the bureaucratically limited viewpoint
+  of a few large institutes like Google Brain.
+
+# Science and its relationship with society
+
+- An absconscion with the public resources we are stewards of, and rather than ensuring that
+  every time we solve some technical problem, or learn something new we make it available
+  to the public in a medium they can access. Instead we largely make paywalled pdfs,
+  in part contributing to public distrust of science --- why would they trust us when
+  they have no idea what we do?
+
+The most profound impact of scientific deinfrastructuring on society will come from
+what will happen if we do nothing...
 
 ---
 
@@ -398,8 +378,15 @@ other softwarez to mention:
 </FlexBox>
 
 
-Notes: v briefly, just making the points that there are lots of ways this could shake out,
-say that we'll get to alternatives as we go
+Notes: After slide...
+
+This is not theoretical:
+
+Google gained initial dominance by consolidating, in addition to youtube, doubleclick, etc.
+Freebase, a smalltime open source knowledge graph framework that powers its search results
+
+Google DeepMind and OpenAI already own machine learning by just having more computing
+infrastructure
 
 ---
 
@@ -536,33 +523,6 @@ headerProps={{fontSize:80}}>
   Data
 </PositionedHeading>
 
-
-
-
-
-
----
-
-## "Let us now anathemize techno hubris"
-
-<Box  width={2/3} margin={"auto"}>
-<Card elevation={1}>
-  <CardContent>
-    <Quote>
-      Much technological infrastructure development
-      has been motivated by the belief that if we build it they will come. ...<br/><br/>
-      <strong>It is not enough to put out a new
-      technical infrastructure – it needs to be woven into the daily
-        practices of knowledge workers.</strong> <br/><br/> We are dealing with a massively
-      entrenched set of institutions, built around the last information age and
-      fighting for its life.
-    </Quote>
-    <Text fontSize={30}>-Bowker et al (2010) <Link fontSize={30} href={"https://doi.org/10.1007/978-1-4020-9789-8_5"}>"Toward Information Infrastructure Studies"</Link></Text>
-  </CardContent>
-</Card>
-</Box>
-
-
 ---
 
 # Design Principles
@@ -582,6 +542,10 @@ headerProps={{fontSize:80}}>
 <Box margin={"auto"} marginTop={"2em"} width={"65%"}>
 <VerticalLinearStepper
     steps={[
+      {
+        title: "Anathemize Techno-Hubris",
+        body: ""
+      },
       {
         title: "Frameworks, not Platforms",
         body:
@@ -605,7 +569,7 @@ headerProps={{fontSize:80}}>
         ' to only a small number of users breaks the system. If its hard to turn on a faucet, it aint infrastructure.',
       },
       {
-        title: 'Modularity is Flexibility',
+        title: 'Integration, not Invention',
         body: "Build complex systems out of simple components."+
               "Let people adopt things gradually"+
             "Reciprocally: \"the test of independent invention\" -"+
@@ -616,9 +580,3 @@ headerProps={{fontSize:80}}>
 />
 </Box>
 </Appear>
-
-Notes: x
-
-Draw these! Maybe just go ahead and name the connection to the design of IP. like ... learning from the most successful
-decentralized infrastructure of all time, the internet, we can start off with a few basic design principles that will
-serve as points of contrast with the construction and constitution of centralized infrastructure.

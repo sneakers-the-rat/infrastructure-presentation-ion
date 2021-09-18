@@ -13,6 +13,7 @@ import {
 import HideSlide from './components/hideslide';
 
 import {ThemeProvider} from '@material-ui/core';
+import styled from '@material-ui/styles/styled/styled'
 
 import TOC from './components/toc'
 
@@ -21,7 +22,11 @@ import slides_p2p, {notes as notes_p2p} from './slides/1_data.mdx';
 import slides_tools, {notes as notes_tools} from './slides/2_tools.mdx';
 import slides_knowledge, {notes as notes_knowledge} from './slides/3_knowledge.mdx';
 import slides_conclusion, {notes as notes_conclusion} from './slides/4_conclusion.mdx';
-import {material_theme, spectacle_theme} from './theme';
+import {material_theme, spectacle_theme, useMuiStyles} from './theme';
+
+const StyledNotes = styled(Notes)({
+  color: 'background'
+})
 
 let all_slides = [
   slides_intro,
@@ -43,33 +48,40 @@ const toc_slides = [
   {
     name: 'intro',
     display: 'Introduction',
-    slides: slides_intro
+    slides: slides_intro,
+    notes: notes_intro
   },
   {
     name: 'data',
     display: 'Shared Data',
-    slides: slides_p2p
+    slides: slides_p2p,
+    notes: notes_p2p
   },
-  {
-    name: 'tools',
-    display: 'Shared Tools',
-    slides: slides_tools
-  },
-  {
-    name: 'knowledge',
-    display: 'Shared Knowledge',
-    slides: slides_knowledge
-  },
-  {
-    name: 'outro',
-    display: 'Outro',
-    slides: slides_conclusion
-  },
+  // {
+  //   name: 'tools',
+  //   display: 'Shared Tools',
+  //   slides: slides_tools,
+  //   notes: notes_tools
+  // },
+  // {
+  //   name: 'knowledge',
+  //   display: 'Shared Knowledge',
+  //   slides: slides_knowledge,
+  //   notes: notes_knowledge
+  // },
+  // {
+  //   name: 'outro',
+  //   display: 'Outro',
+  //   slides: slides_conclusion,
+  //   notes: notes_conclusion
+  // },
 ]
 
 const toc_slides_flat = Array.prototype.concat(...toc_slides.map((slide_group) => (
-    slide_group.slides.map(slide => ({slide:slide, group:slide_group.name}))
+    slide_group.slides.map((slide, idx) => ({slide:slide, group:slide_group.name, notes:slide_group.notes[idx]}))
 )))
+
+console.log(toc_slides_flat)
 
 const transition = [
   {display:'none'},
@@ -102,6 +114,8 @@ function Presentation(){
   // MDXSlide elements should have exported
   // variables as props (or at least
   // MDXCreateElement does in the debugger)
+  const classes = useMuiStyles();
+
   return(
   <MDXProvider components={mdxComponentMap}>
     <ThemeProvider theme={material_theme}>
@@ -134,9 +148,11 @@ function Presentation(){
             transition={transition}
           >
             <slide.slide key={`innerslide-${i}`}/>
-            {/*<Notes>*/}
-              {/*<MDXNote/>*/}
-            {/*</Notes>*/}
+            <StyledNotes color={"background"}>
+              <div className={"notes-style-container"}>
+                <slide.notes  color={"background"} />
+              </div>
+            </StyledNotes>
           </HideSlide>
 
       )}

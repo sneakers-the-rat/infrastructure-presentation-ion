@@ -61,33 +61,14 @@ Notes: notes!
 <Heading marginLeft={'0px'} textAlign={'left'}>
   Accessible Data Standardization
 </Heading>
+<Box width={1/3}>
 <Text fontSize={30} fontFamily={'monospace'} style={{ marginBottom: '12px' }}>
   To start, we need our data to be FAIR...<br/>which means standardization... but that's still really hard!
 </Text>
-<Text  fontSize={30} fontFamily={'monospace'}>Here's one take: </Text>
-<Link  fontSize={26} fontFamily={'monospace'} href={"https://onice-conversion.readthedocs.io/en/wehr/"}>https://onice-conversion.readthedocs.io/en/wehr/</Link>
-<Box width={4 / 9} id={"codebox"}>
-    <CodePane language={"python"} theme={funky} marginLeft={'auto'} width={"100%"} className={"onice-code"} id={'conversion-code-pane'}
-              highlightRanges={[
-                [4,9], 6, [7, 9],
-                [11, 16], 13, 14, 30
-              ]}>
-      {'from onice_conversion import NWBConverter, spec \n\
-converter = NWBConverter()\n\
-\n\
-# specify your data and metadata as you would in plain English!\n\
-# eg. I have my subject id embedded in one of my file names:\n\
-# \'my-favorite-file_SUB1012_2021-04-20.dat\'\n\
-converter.add_metadata(\n\
-  spec.Path(\'my-favorite-file_{subject_id}_{start_date}.dat\')\n\
-  )\n\
-  \n\
-# Extract data/metadata from other files!\n\
-converter.add_container(\'Position\', \n\
-  spec.Mat(\'positions.mat\', \'data\', \n\
-    (\'wherever\', \'they\', \'are\', [\'x\', \'y\', \'z\']))\n\
-  )\n'}
-    </CodePane></Box>
+<Text  fontSize={50} style={{marginTop:"2em"}} fontFamily={'monospace'}>Just for today, we'll skip this one and *assume we fix it with humane interface development*</Text>
+<Text  fontSize={30} style={{marginTop:"1em"}} fontFamily={'monospace'}>shouldn't be any problem assuming formats are uncontroversial... right?</Text>
+<Link  fontSize={26} fontFamily={'monospace'} href={"https://onice-conversion.readthedocs.io/en/wehr/"}> (you can help out at https://onice-conversion.readthedocs.io/en/wehr/)</Link>
+</Box>
 
 <svg width={1920} height={1080} className={'svg-fill'}>
   <Dataset
@@ -252,6 +233,8 @@ That p2p system is literally the most basic one. extend it in a bunch of ways
 
 # Databases Are Political
 
+( ha i fooled ya on the "just assume standardization is easy" )
+
 <Box width={2/3} marginLeft={"auto"} marginRight={"auto"}>
   <Text>The plan *can't* just be to try to get everyone to use the same thing</Text>
   <Card elevation={1}>
@@ -413,12 +396,3 @@ Notes: federation notes
 
 
 ---
-
-<Heading fontFamily={"Source Serif Pro"} fontWeight={200}
-         fontStyle={"italic"} textAlign={"left"}>Federating</Heading>
-
-<Federation/>
-
-Notes: text should appear in going like 'can we federate uwu with the -><- fingers'
-
-

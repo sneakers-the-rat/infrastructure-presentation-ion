@@ -47,7 +47,7 @@
     "d3-force": "^2.1.1",
     "html-webpack-plugin": "^5.3.1",
     "mini-css-extract-plugin": "^1.5.0",
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0",
     "path": "^0.12.7",
     "process": "^0.11.10",
     "react-chat-window": "^1.2.1",

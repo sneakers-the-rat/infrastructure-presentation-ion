@@ -1,6 +1,6 @@
 // https://github.com/FormidableLabs/spectacle/blob/main/src/theme/default-theme.js
 import React from 'react';
-import {createMuiTheme} from '@material-ui/core/styles';
+import {createMuiTheme, makeStyles} from '@material-ui/core/styles';
 
 export const spectacle_theme = {
   size: {
@@ -22,6 +22,7 @@ export const spectacle_theme = {
     knowledgeDark: '#2a66c3',
     data: '#2f0987',
     dataLight: '#784ed2',
+    notesColor: '#ffffff'
   },
   fonts: {
     header: '"Helvetica Neue", Helvetica, Arial, sans-serif',
@@ -37,6 +38,7 @@ export const spectacle_theme = {
     h3: '56px',
     text: '44px',
     monospace: '20px',
+    notesSize: '20px'
   },
   fontWeights: {
     h1: 200
@@ -50,7 +52,7 @@ export const material_theme = createMuiTheme({
   palette: {
     type: 'light',
     primary: {
-      main: spectacle_theme['colors']['secondary'],
+      main: "#ff00ff",
     },
     secondary: {
       main: spectacle_theme['colors']['tertiary'],
@@ -86,4 +88,10 @@ export const material_theme = createMuiTheme({
     },
   },
 });
+
+export const useMuiStyles = makeStyles((material_theme) => {
+  notes: {
+    color: "#ffffff"
+  }
+})
 
