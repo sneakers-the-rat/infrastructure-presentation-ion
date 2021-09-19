@@ -14,6 +14,7 @@ import WikiHardware from '../assets/wiki_hardware.json'
 import {SchemaTree, SchemaContainer} from '../components/schema'; import SvgAnimator from '../components/svg_animator';
 import SemanticEg from '../img/semantic_1-01.svg'
 import Overview from '../img/overview-01.svg'
+import PluginVideo from '../img/autopilot_plugins_short.mp4'
 import {PositionedHeading} from '../components/basic';
 
 # The Semantic Web (& Linked Data)
@@ -99,11 +100,12 @@ in ways never dreamed of by its creators.<br/>
 
 # Standardization is Political
 
-( ha i fooled ya on the "just assume standardization is easy" )
+
 
 <Box width={2/3} marginLeft={"auto"} marginRight={"auto"}>
-  <Text>The plan *can't* just be to try to get everyone to use the same thing</Text>
-  <Card elevation={1}>
+  <Text>The plan *can't* be to get everyone to use the same thing</Text>
+  <Text fontFamily={"monospace"} fontSize={14} color={"#ff0000"}>( ha i fooled ya on the "just assume standardization is easy" )</Text>
+  <Card elevation={1} style={{marginTop:"50px"}}>
     <CardContent>
       <Quote  fontSize={"2em"} fontFamily={"Source Serif Pro"} fontWeight={200} fontStyle={"italic"}>
         Participants describe the individual sequence database
@@ -157,16 +159,24 @@ that you, um, you had, your, you you could, you’ll do, you could you, you want
 
 ---
 
-# Technical knowledge, Credit Assignment, and Multimodal Integration
+# Multimodal Knowledge Integration
 
 <Box width={2/3} marginLeft={'auto'} marginRight={'auto'} height={"100%"}>
-  <Heading fontSize={'h3'} textAlign={'left'} color={"tools"} fontWeight={200} fontStyle={"italic"}>
+  <Heading fontSize={'h3'} textAlign={'center'} color={"tools"} fontWeight={200} fontStyle={"italic"}>
     Eg. the Autopilot Wiki - wiki.auto-pi-lot.com
   </Heading>
   <Box flexDirection={'column'} height={"100%"}>
     <IFrame paper={false} flexGrow={4} src={"https://wiki.auto-pi-lot.com/index.php/Autopilot_Wiki"}/>
   </Box>
 </Box>
+
+---
+
+
+<video controls loop>
+  <source src={PluginVideo} type={"video/mp4"}/>
+</video>
+
 
 ---
 

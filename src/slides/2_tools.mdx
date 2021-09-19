@@ -74,18 +74,12 @@ import Datajoint from '../components/fragments/datajoint';
   Universal Data Sharing
 </PositionedHeading>
 
----
+Notes: placeholder
 
-- Analysis and Tools are on either side of the data
+- Analysis and Tools are on either side of the data, input and output
 - no time to go into great detail here, so focus on lessons for how people should approach tools
-  and comparison to current practice
-- input and output
-- reward for participating (free dope SOTA analysis),
-- lowering barriers to access the system (experimental tool funnels data directly into the p2p system)
-- Pacific Research Platform - https://prp.lsmarr.net/nautilus-cluster-map/
-- Autopilot
-- comparison to other types of tools ("a high throughput platform for" that can't be built by anyone else,
-  had to rebuild a bunch of its infrastructure, integratable (use networking modules, hardware, ))
+and comparison to current practice
+
 
 ---
 
@@ -270,43 +264,18 @@ import Datajoint from '../components/fragments/datajoint';
     appearStep={5}
 />
 
-<Popup title="Analysis Tools!!!" showStep={6}>
-  <Datajoint/>
-</Popup>
+Notes: Comparison with existing ideas like
 
-
-
-
-Notes: Overlay datajoint elements & bids apps are good starts!
-
+- Individual analysis libraries
+- Custom lab code
+- Fancy purpose-built dashboards
 
 ---
 
 # Experimental Framework
 
-<Box width={2/3} marginLeft={"auto"} marginRight={"auto"}>
-  <Text>What kind of tool do we need for the next 10 years of neuroscience?</Text>
-
-<VerticalLinearStepper
-steps={[
-  {
-    title: 'Flexible',
-    body: "enough to handle infinitely variable naturalistic tasks"
-  },
-  {
-    title: "Fast",
-    body: "Fast enough for realtime control and huge data streams"
-  },
-  {
-    title: "Accessible",
-    body: "Accessible enough for anyone to use and contribute to"
-  },
-  {
-    title: "Reproducible",
-    body: "Purpose-built to support experimental replication, provenance, and reproducibility"
-  },
-]}
-/>
+<Box width={9/10} marginLeft={"auto"} marginRight={"auto"}>
+  <Text>How can you possibly build tools for an infinite variety of preps and hardware?</Text>
 </Box>
 
 <SvgAnimator
@@ -329,7 +298,7 @@ steps={[
       easing: 'easeInOutSine'
     }
   ]]}
-  style={{top:"360px", transform:"scale(0.5)", transformOrigin:'center'}}
+  style={{top:"100px", transform:"scale(0.8)", transformOrigin:'center'}}
 />
 
 ---
@@ -387,11 +356,14 @@ steps={[
            fontStyle={"italic"} textAlign={"left"}>
   p a r a l l a x i n</Heading>
 
-Notes: checkboxes to tick off elements of experiment
-- cameras: control any hardware, any amount bc distributed
-- dlc: integrate with external libraries
-- computers: flexible task design
+Notes: Important features
 
+- Integrate existing, custom hardware
+- Integrate other software libraries
+- Give space to solve common programming problems durably
+  - scikit-learn or scipy for experiments
+- Allow gradual adoption and reciprocal integration
+- Replicability
 
 ---
 

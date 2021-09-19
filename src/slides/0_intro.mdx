@@ -221,20 +221,28 @@ Notes: I want to talk about something much larger than computers being hard
 I want to make the argument that many seemingly-distinct problems have a shared cause:
 the near-absence of basic digital infrastructure for science.
 
-Rather than being trivial or unavoidable, I will argue that digital deinfrastructuring
-- defines the everyday reality of science, with harms personal
-  and systemic, present and future.
-- can be solved! but an ethical, empowering solution is not inevitable -- indeed
-  we are on track to create an immensely more terrifying triple-dip industry
-  strapped to the back of public funding for science
-- and **decentralization** is the best means of liberatory, globally empowering
-  digital infrastructure.
+This defines the everyday reality of scientific practice, but we often don't even see them as solvable problems because
+they are so widespread, interconnected, etc.
 
-To do that
-- I'll take some lessons from other knowledge communities: specifically pirates,
-  the rad hippie wing of internet architects, librarians, STS.
-- And sketch basic vision of what decentralized digital infrastructure for science
-  could look like, how we get there, and how we are trying to get started at ION
+By diagnosing the problems as infrastructural, they can be solved instead of patched over!
+
+That ethical or even functional infrastructure is not inevitable, and current development practices are driving us
+in precisely the wrong direction
+
+Give a vision of what a system could look like to bring the problem down from abstraction, and how
+we can start working on them right here with ONICE.
+
+<hr/>
+
+What I'll have to skip today:
+- Like all the detail
+- Description of systemic forces in play
+- History and sociology of knowledge communities drawn from:
+  - pirates,
+  - rad hippie internet architects,
+  - librarians & information scientists
+  - STS scholars
+- Landscape of existing technologies
 
 <hr/>
 
@@ -245,35 +253,42 @@ To do that
 - Fundamentally altered the practice of science so that almost every single field
   is half programming now
 - Scientific **labor is prodigiously reduplicated**. reinventing
-  everything and redoing the same experiments in every lab, and the ethical
-  catastrophe for animal research that entails
-- Most of that labor falls on **ECRs**, creating a labor system where lack of infrastructure
-  is papered over by always-expanding needs for cheap labor, armies of undergrads
-  clicking through videos, cleaning data, grad students thrown to the wolves of amateur engineering
-- The production of an underclass of technical laborers that do a large proportion
+  everything and redoing the same experiments in every lab, tremendous waste of public funding and human lifespan
+- Hidden, systemic dereliction of basic tenets of animal research ethics as we sacrifice many times the animal lives
+  that should be necessary for a given question.
+- Inequity in labor hierarchy - Most of that labor falls on **ECRs**, creating a labor system where lack of infrastructure
+  is papered over by always-expanding needs for cheap labor,
+  - armies of undergrads clicking through videos, cleaning data,
+  - grad students thrown to the wolves of amateur engineering
+- Inequity in labor class - The production of an underclass of technical laborers that do a large proportion
   of the *work* of science but don't have access to the traditional reward mechanisms
   of science (ie. papers)
-- Technical and resource knowledge silos make the *rich get richer* as wealthy labs
+- Inequity between institutions - Technical and resource knowledge silos make the *rich get richer* as wealthy labs
   and institutes can afford to hire engineers and build sophisticated core facilities,
   do a qualitatively different kind of science, and maintain increasingly disproportionate
   funding
 
 # As a System of Scientific Inquiry:
 
-- Holds science back from its naive characterization as a cumulative, self-correcting
-  system.
+- Science is cumulative and self-correcting in theory only: since everything is contingent on a fragmented
+  body of papers,
+  - nothing is ever decided,
+  - understanding a field takes literal decades, and
+  - interaction between arguments is implicit at best.
 - Profoundly leaky knowledge system where entire PhDs worth of data are lost and
   rendered useless as a matter of regular practice just by forgetting what format it's in
   or where it's stored.
 - Inevitability of replication crises because it's impossible to replicate experiments
   on rigs that were built once and never documented
 - Stunted scientific discourse on for-profit platforms that don't come close to
-  satisfying our needs. The scientific consensus exists as a disorderly pile of hundreds of
-  thousands of isolated pdfs who only reference each other via the exhausting labor
-  of exhaustive brute force literature searches. That, or godforsaken science twitter
+  satisfying our needs. The widescale adoption of Twitter is not some hideous blessing, but
+  evidence of the absolutely dire need for new communication mechanisms and media beyond legacy journals.
 - The potential futility of understanding the brain from the limited viewpoint
-  of data from a single or small number of labs, or the bureaucratically limited viewpoint
-  of a few large institutes like Google Brain.
+  of data from a single or small number of labs
+  - the advent of centralized high-throughput institutes and platforms like allen brain atlas/observatory are also
+    symptoms, there is so much fluorescence microscopy but because there's no means of mutually indexing it we need
+    connectivity atlas,
+  - but this can't possibly scale to the fullness of the brain, and are dependent on benevolence of billionaires
 
 # Science and its relationship with society
 
@@ -282,6 +297,8 @@ To do that
   to the public in a medium they can access. Instead we largely make paywalled pdfs,
   in part contributing to public distrust of science --- why would they trust us when
   they have no idea what we do?
+  - We should identify the need for "science communication" correctly as a social/cultural problem with science
+    but also as an infrastructural one -- people are smart, they just have no idea how to penetrate our opaque science universe
 
 The most profound impact of scientific deinfrastructuring on society will come from
 what will happen if we do nothing...
@@ -544,14 +561,14 @@ headerProps={{fontSize:80}}>
 <VerticalLinearStepper
     steps={[
       {
-        title: "Anathemize Techno-Hubris",
-        body: ""
-      },
-      {
-        title: "Frameworks, not Platforms",
+        title: "Frameworks and Protocols, not Platforms",
         body:
               "Fewer tools, more tools that can build tools"+
               "(so that we can have more tools later)"
+      },
+      {
+        title: "\"Anathemize Techno-Hubris\"",
+        body: ""
       },
       {
         title: 'Embrace Heterogeneity, Be Uncoercive',
@@ -581,3 +598,22 @@ headerProps={{fontSize:80}}>
 />
 </Box>
 </Appear>
+
+Notes: placeholder
+
+- Anathemize Techno Hubris
+  - Not just technological problem, always social and cultural.
+  - Must design tools embedded in cultures of practice
+- Frameworks and Protocols, not Platforms
+  - Rather than designing yet another custom 'high throughput system for x' or 'visualization dashboard for y',
+    design systems that capture the logical structure of the problem so that those can be derived
+- Heterogeneity
+  - Rather than asking everyone to change the way they do science, build a common space for people to express their practice
+    in a collectivized system
+- Empower People, not Systems
+  - Look at all the platforms that have been funded, built, and abandoned when the funding dries up. we need to develop systems
+    that have the power in the endpoints so they don't rely on maintaining some shared core.
+  - if the system fails, then what?
+- Integration
+  - Rather than making something new, if we have frameworks, extend them to suit your needs.
+  - Reciprocally: design systems so they can be integratable into some future system - "the principle of least power"
